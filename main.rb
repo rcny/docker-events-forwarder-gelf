@@ -47,9 +47,7 @@ docker = Excon.new('unix:///', socket: '/var/run/docker.sock', persistent: true)
 handler = proc { |response_part| gelf.notify(short_message: response_part) }
 
 begin
-  loop do
-    docker.get(path: '/events', read_timeout: 604800, response_block: handler)
-  end
+  docker.get(path: '/events', read_timeout: 604800, response_block: handler)
 rescue Excon::Error::Timeout
   puts 'Timeout was reached. Connecting to the events stream again'
   retry
