@@ -1,0 +1,20 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    excon (0.62.0)
+    gelf (3.1.0)
+      json
+    json (2.2.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  excon (~> 0.62.0)
+  gelf (~> 3.1)
+
+RUBY VERSION
+   ruby 2.6.0p0
+
+BUNDLED WITH
+   1.17.2
