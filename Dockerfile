@@ -1,5 +1,5 @@
 FROM ruby:2.6-alpine
-RUN apk add --no-cache --update shadow dumb-init gcc libc-dev make
+RUN apk add --no-cache --update dumb-init gcc libc-dev make
 
 WORKDIR /app
 COPY Gemfile Gemfile.lock .ruby-version ./
